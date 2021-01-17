@@ -1,0 +1,845 @@
+/* GLOBAL STYLES */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+span {
+    color: crimson;
+}
+
+/* END OF GLOBAL STYLES */ 
+
+/* INDEX SECTION ---------------------------------------------------------------*/
+
+
+/* LANDING PAGE  BACKGROUND */ 
+
+#index {
+    background-image: url("https://cdn.wallpaperhi.com/1920x1200/20140620/glass%20cocktail%20black%20background%20splashes_www.wallpaperhi.com_89.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;    
+}
+/* END OF LANDING PAGE BACKGROUND */ 
+
+/* NAVBAR SECTION  */
+
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    z-index: 1;
+}
+
+.navbar .row{
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+}
+
+
+.navbar .col-left {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar .col-left .brand {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.navbar .brand a, i{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+}
+
+.navbar .brand span {
+    margin-left: 1.2rem;
+    font-weight: 400;
+}
+
+.navbar .col-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 2;
+}
+
+.navbar .menu a{
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 0px 10px;
+    border-left: 1px solid crimson;
+    border-right: 1px solid crimson;
+    margin: 1em;
+    transition: .4s ease;
+}
+
+.navbar .menu a:hover {
+    color: crimson;
+    font-size: 1.7rem;
+}
+
+.navbar .menu a:visited{
+    color: teal;
+}
+
+/* END OF NAVBAR SECTION*/
+
+/* CALL TEXT SECTION*/
+
+.call-text {
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    font-size: 2rem;
+    line-height: 2em;
+}
+
+.call-text h1 {
+    color: transparent;
+    position: relative;
+    animation: text_reveal ease forwards;
+}
+
+
+.call-text h1:nth-child(1){
+    animation-delay: 1s;
+}
+.call-text h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+.call-text h1 span{
+    color: transparent;
+    animation: text_reveal_span ease forwards;  
+}
+
+.call-text h1:nth-child(1) span{
+    animation-delay: 1s;
+}
+
+.call-text h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+
+
+.call-text h1 .text_reveal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: crimson;
+    animation: overlay 1s ease forwards;
+    
+}
+
+.call-text h1:nth-child(1) .text_reveal {
+    animation-delay: 0.5s;
+}
+.call-text h1:nth-child(2) .text_reveal {
+    animation-delay: 1.5s;
+}
+
+.call-text .button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    padding: 2px;
+    border: 1px solid crimson;
+    border-radius: 15px;
+}
+
+.call-text .button a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.call-text .button:hover {
+    background-color: crimson;
+    color: black;
+}
+
+/* END OF CALL TEXT SECTION*/
+
+/* END OF INDEX SECTION ---------------------------------------------------------------*/
+
+
+
+/* PROFILE SECTION ---------------------------------------------------------------*/
+
+/* SECONDARY PAGES BACKGROUND */ 
+
+#profile {
+    color: black;
+    text-align: center; 
+}
+
+/* END OF SECONDARY PAGES BACKGROUND SECTION */
+
+/* SECONDARY NAVBAR SECTION */ 
+
+
+#profile .navbar {
+    opacity: 1;
+}
+
+#profile .navbar .row {
+    box-shadow: 0px 0px 15px black ;   
+}
+
+#profile .navbar .row .col-left a{
+    font-weight: 400;
+}
+
+#profile .navbar .row .brand i{
+    color: black;
+}
+
+
+#profile .navbar .row a{
+    color: black;
+    transition:  0.4s ease;
+}
+
+#profile .col-right .menu a:hover{
+    border-radius: 5px;
+    color: crimson;
+    font-size: 1.7rem;
+}
+
+#profile .col-right .menu a:visited{
+    color: teal;
+  
+}
+
+/* END OF SECONDARY NAVBAR SECTION */ 
+
+/*  CONTENT SECTION*/
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.content-img{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 80%;
+    flex: 1;
+}
+
+.content-img img {
+    object-fit: none;
+    object-position: bottom;
+    width: 50%;
+    height: 55%;
+    opacity: 0.9;
+    filter: drop-shadow(15px 15px 10px black);
+    border-radius: 15px;
+}
+
+.content .content-text{
+    position: relative;
+    margin-top: 10%;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+}
+
+.content-text .title{
+    font-size: 2em;
+    margin: 4rem 0;
+    letter-spacing: 1rem;
+}
+
+.content-text .text {
+    text-align: justify;
+    margin: 0em 3em;
+    line-height: 1.4em;
+    font-size: 1em;
+    width: 60%;
+    height: 50%;
+    font-weight: 400;  
+}
+
+/*  END OF CONTENT SECTION*/
+
+/* END OF PROFILE SECTION ---------------------------------------------------------------*/
+
+/* EXPERIENCE SECTION ---------------------------------------------------------------*/
+
+
+.experience{
+    /* background-color:lightblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.experience-title{
+    position: absolute;
+    top: 15%;
+}
+
+.experience-title h1 {
+    font-size: 3rem;
+}
+
+.experience-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    line-height: 2.5rem;
+}
+
+.experience-content .experience-item{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    position: relative;
+    transition: 0.3s;
+}
+
+.experience-content .experience-item:hover{
+    box-shadow: 0px 0px 15px black;
+}
+
+
+.experience-content .experience-item h2{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    margin-top: 5%;
+    font-weight: 700;
+}
+
+
+.experience-content .experience-item i {
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-bottom: 5%;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 0.3rem;
+}
+
+.experience-content .experience-item p {
+    font-size: 0.9rem;
+    margin-top: 5%;
+}
+
+.experience-content .experience-item ul {
+    margin-top: 10%;
+}
+
+/* END OF EXPERIENCE SECTION ---------------------------------------------------------------*/
+
+/* CREATIONS SECTION ---------------------------------------------------------------*/
+
+.creations{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: flex-start;
+    width: 100%;
+    height: 85vh;
+}
+
+.creations .creations-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    flex: 1;
+    font-size: 1.8rem;
+}
+
+.creations .creations-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85vh;
+    flex: 4;
+}
+
+.creations .creations-cards .creation-card{
+    background-color: transparent;
+    perspective: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 50vh;
+    width: 23%;
+    margin-top: 10vh;
+    /* box-shadow: 0 0 10px grey; */
+}
+.creations .creations-cards .creation-card .card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.creations .creations-cards .creation-card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+.creations .creations-cards .creation-card .card-inner .card-front{
+    border-radius: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #bbb;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.creations .creations-cards .creation-card .card-inner .card-front img{
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.creations .creations-cards .creation-card .card-inner .card-back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.creations .creations-cards .creation-card h1{
+    font-weight: 500;
+    margin: 1em;
+}
+
+.creations .creations-cards .creation-card ul{
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+
+
+/* ENd OF CREATIONS SECTION ---------------------------------------------------------------*/
+
+
+/* EDUCATION SECTION ---------------------------------------------------------------*/
+
+.education {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.education .education-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    font-size: 2rem;
+    flex: 1;
+}
+
+.education .educational-background{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    flex: 2;
+}
+
+.educational-background .graduations, .certificates{
+    width: 100%;
+    height: 100%;
+    padding-top: 5vh;
+}
+
+.educational-background .certificates{
+    border-left: 1px solid black;
+    
+}
+
+
+.graduations h1, .certificates h1{
+    font-size: 2rem;
+    margin-bottom: 5vh;
+}
+
+.graduations ul, .certificates ul{
+    font-size: 1rem;
+    line-height: 2.5rem;
+    text-align: center;
+    list-style: none;
+}
+
+/* END OF EDUCATION SECTION ---------------------------------------------------------------*/
+
+
+
+/* CONTACT SECTION ---------------------------------------------------------------*/
+
+.contact-section .contact{
+    padding: 10px;
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    top: 10vh;
+}
+
+.contact .contact-form {
+    margin-top: 2vh;
+    margin-bottom: 8vh;
+    
+}
+
+
+.contact .contact-form h2{
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.contact .row .col-left iframe{
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    position: relative;
+    width: 30vw;
+    height: 40vh;
+}
+
+.contact-section .contact .row {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    /* left: 10vw; */
+}
+
+.contact-section .contact .row .col-left {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 50vh;
+    width: 100%;
+    
+}
+
+.contact-section .contact .row .col-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 50vh;
+    text-align: left;
+}
+    
+.contact-section .contact .row .col-right label{
+    font-size: 1.2rem;
+}
+
+.contact-section .contact .row .col-right input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.contact-section .contact .row .col-right form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.col-right form textarea{
+    width: 80%;
+    margin-top: 10px;
+}
+
+
+input[type=text] {
+    width: 80%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+input[type=submit] {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: rgba(220, 20, 60, 0.788);
+    color: white;
+    padding: 10px 40px;
+    border-radius:5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type=submit]:hover {
+    background-color:crimson;
+}
+
+/* END OF CONTACT SECTION ---------------------------------------------------------------*/
+
+/* FOOTER SECTION ---------------------------------------------------------------*/
+
+.footer {
+    color: white;
+    background-image: url(../imgs/footer.png);
+    height: 15vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-title{
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 70%;
+}
+
+
+.footer-title h1{
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+    line-height: 2rem;
+}
+
+
+.footer-title h2 {
+    text-transform: uppercase;
+    font-size: 1.2rem;    
+    letter-spacing: 0.3em;
+}
+
+.footer-title p{
+    font-size: 0.5rem;
+    /* font-weight: 300; */
+}
+
+.social-media {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+
+.media-text {
+    width: 100%;
+}
+
+.social-media .media-text h2 {    
+    font-size: 1rem;   
+}
+
+.media-icons i{
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px; 
+}
+
+.media-icons .fa-facebook:hover {
+    color: #3b5998;
+}
+
+.media-icons .fa-twitter:hover {
+    color: #00acee;
+}
+
+.media-icons .fa-instagram:hover {
+    color: #fb3958;
+}
+
+.media-icons .fa-linkedin:hover {
+    color: #0e76a8;
+}
+
+/* END OF FOOTER SECTION ---------------------------------------------------------------*/
+
+
+/*  KEYFRAMES */
+
+
+@keyframes overlay{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+
+@keyframes text_reveal_span{
+    100%{
+        color: crimson;
+    }
+}
+
+/*  END OF KEYFRAMES */
+
+
+/* RESPONSIVENESS CODE  */
+
+@media only screen and (max-width: 768px){
+    body{
+        background-position: center center;
+    }
+
+    .call-text {
+        font-size: 1.4rem;
+        transition: 0.5s ease;
+        top: 50%;
+    }
+
+    .contact .row .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+
+    .navbar {
+        height: 20vh;
+    }
+    .navbar .row{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar .col-left {
+        width: 100vw;
+    }
+
+    .navbar .col-left .brand a, i{
+        letter-spacing: 1rem;
+        font-size: 2rem;
+    }
+    .navbar .col-right {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex: 2;
+    }
+    
+    .navbar .menu {
+        display: flex;
+        flex-direction: column;
+        height: 20vh;
+        position: absolute;
+        left: 0;
+        top: 10vh;
+    }
+    .call-text {
+        position: absolute;
+        left: 5%;
+        top: 70%;
+    }
+    
+}  
+
+/* END OF RESPONSIVENESS CODE  */
+
+
+
+
+
+
+
+
+
+
+
+

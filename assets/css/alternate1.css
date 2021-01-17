@@ -1,0 +1,900 @@
+
+@font-face{
+    font-family: PromptRegular;
+    src: url(assets/fonts/Prompt-Regular.ttf);
+}
+
+@font-face{
+    font-family: PromptLight;
+    src: url(assets/fonts/Prompt-Light.ttf);
+}
+
+/* GLOBAL STYLES */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PromptRegular;
+    font-weight: 400;
+}
+
+span {
+    color: lightskyblue;
+}
+
+/* END OF GLOBAL STYLES */ 
+
+/* INDEX SECTION ---------------------------------------------------------------*/
+
+
+/* LANDING PAGE  BACKGROUND */ 
+
+#index {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center; 
+    animation: animate 20s ease-in-out infinite;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:   url(../imgs/bg-1.jpg),
+                        url(../imgs/bg-2.jpg),
+                        url(../imgs/bg-3.jpg),
+                        url(../imgs/bg-4.jpg);
+    
+}
+/* END OF LANDING PAGE BACKGROUND */ 
+
+/* NAVBAR SECTION  */
+
+.navbar {
+    width: 30vw;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.row{
+    width: 30vw;
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+
+.navbar .col-left {
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    height: 15vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .col-left .brand {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
+.navbar .brand a, i{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.navbar .brand span {
+    margin-left: 0.8rem;
+    font-weight: 400;
+}
+
+.navbar .col-right{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 85vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navbar .col-right a{
+    text-decoration: none;
+}
+
+.navbar .menu{
+    height: 100%;
+    width: 100%;
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar .menu a{
+    position: relative;
+    /* top: 20%; */
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    /* margin: 30px 0px;   */
+}
+
+.navbar .menu a:hover {
+    color: lightskyblue;
+    transition: .3s ease;
+}
+
+.navbar .menu a:visited {
+    color: teal;
+}
+
+
+/* END OF NAVBAR SECTION*/
+
+
+
+/* CALL TEXT SECTION*/
+
+.call-text {
+    margin-left: 2%;
+    width: 30vw;
+    position: absolute;
+    right: 2%;
+    top: 75%;
+    font-size: 2rem;
+    line-height: 2em;
+}
+
+.call-text h1 {
+    color: transparent;
+    position: relative;
+    animation: text_reveal ease forwards;
+}
+
+
+.call-text h1:nth-child(1){
+    animation-delay: 1s;
+}
+.call-text h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+.call-text h1 span{
+    color: transparent;
+    animation: text_reveal_span ease forwards;  
+}
+
+.call-text h1:nth-child(1) span{
+    animation-delay: 1s;
+}
+
+.call-text h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+
+
+.call-text h1 .text_reveal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: lightskyblue;
+    animation: overlay 1s ease forwards;
+    
+}
+
+.call-text h1:nth-child(1) .text_reveal {
+    animation-delay: 0.5s;
+}
+.call-text h1:nth-child(2) .text_reveal {
+    animation-delay: 1.5s;
+}
+
+
+
+.call-text .button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.call-text .button a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.call-text .button:hover {
+    background-color: lightskyblue;
+    color: black;
+}
+
+/* END OF CALL TEXT SECTION*/
+
+/* END OF INDEX SECTION ---------------------------------------------------------------*/
+
+
+
+/* PROFILE SECTION ---------------------------------------------------------------*/
+
+/* SECONDARY PAGES BACKGROUND */ 
+
+#profile {
+    background: radial-gradient(rgb(165, 91, 31), rgb(0, 0, 0));
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    position: relative;   
+}
+
+/* END OF SECONDARY PAGES BACKGROUND SECTION */
+
+/* SECONDARY NAVBAR SECTION */ 
+
+
+#profile .navbar .row {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 30vw;
+    
+    /* box-shadow: 0px 0px 15px black ;    */
+}
+
+#profile .navbar .row .col-left a{
+    /* margin-top: 5%; */
+    font-weight: 400;
+}
+
+#profile .navbar .row .brand i{
+    /* margin-top: 5%; */
+    color: white;
+}
+
+
+#profile .navbar .row a{
+    color:white;
+    transition: 0.3s ease;
+}
+
+#profile .col-right .menu a:hover{
+    border-radius: 5px;
+    color: lightskyblue;
+    font-size: 1.7rem;
+    transition: 0.3s ease;
+}
+
+#profile .col-right .menu a:visited{
+    color: teal;
+}
+
+/* END OF SECONDARY NAVBAR SECTION */ 
+
+/*  CONTENT SECTION*/
+
+.container{
+    height: 85vh;
+    position: absolute;
+    left: 30vw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.content-img{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 80%;
+    flex: 1;
+}
+
+.content-img img {
+    object-fit: none;
+    object-position: bottom;
+    width: 70%;
+    height: 70%;
+    opacity: 0.9;
+    filter: drop-shadow(15px 15px 10px black);
+    border-radius: 15px;
+}
+
+.content-text{
+    width: 50%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 2;
+}
+
+.content-text .title{
+    font-size: 2em;
+    margin: 4rem 0;
+    letter-spacing: 1rem;
+}
+
+.content-text .text {
+    margin: 0em 3em;
+    line-height: 1.4em;
+    font-size: 1em;
+    width: 80%;
+    height: 50%;   
+}
+
+/*  END OF CONTENT SECTION*/
+
+
+/* END OF PROFILE SECTION ---------------------------------------------------------------*/
+
+/* EXPERIENCE SECTION ---------------------------------------------------------------*/
+
+
+.experience{
+    /* background-color:lightblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100%;
+}
+
+.experience-title{
+    position: absolute;
+    top: 5%;
+}
+
+.experience-title h1 {
+    font-size: 3rem;
+}
+
+.experience-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    line-height: 2.5rem;
+}
+
+.experience-content .experience-item{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.experience-content .experience-item:hover{
+    box-shadow: 0px 0px 15px black;
+}
+
+
+.experience-content .experience-item h2{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    margin-top: 5%;
+    font-weight: 700;
+}
+
+
+.experience-content .experience-item i {
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-bottom: 5%;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.3rem;
+}
+
+.experience-content .experience-item p {
+    font-size: 0.9rem;
+    margin-top: 5%;
+}
+
+.experience-content .experience-item ul {
+    margin-top: 10%;
+}
+
+/* END OF EXPERIENCE SECTION ---------------------------------------------------------------*/
+
+/* Experience sizing animation js code*/
+
+.expLarge{
+    width: 100vw;
+    z-index: -1;
+    transition: all 1s ease-in;
+}
+
+.expIndex{
+    z-index: 1;
+}
+/* End of Experience sizing animation js code*/
+
+
+/* CREATIONS SECTION ---------------------------------------------------------------*/
+
+.creations{
+    /* background-color: lightcoral; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    height: 85vh;
+}
+
+.creations .creations-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 15vh;
+    font-size: 1.8rem;
+}
+
+.creations .creations-cards {
+    /* background-color: lightskyblue; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+    /* flex: 1; */
+}
+
+.creations .creations-cards .creation-card{
+    background-color: transparent;
+    perspective: 1000px;
+    align-items: center;
+    height: 300px;
+    width: 200px;
+}
+.creations .creations-cards .creation-card .card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.creations .creations-cards .creation-card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+.creations .creations-cards .creation-card .card-inner .card-front{
+    border-radius: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #bbb;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.creations .creations-cards .creation-card .card-inner .card-front img{
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.creations .creations-cards .creation-card .card-inner .card-back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.creations .creations-cards .creation-card h1{
+    font-weight: 500;
+    margin: 1em;
+}
+
+.creations .creations-cards .creation-card ul{
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+
+
+/* ENd OF CREATIONS SECTION ---------------------------------------------------------------*/
+
+
+/* EDUCATION SECTION ---------------------------------------------------------------*/
+
+.education {
+    width: 70vw;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.education .education-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    font-size: 2rem;
+}
+
+.education .educational-background{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.educational-background .graduations, .certificates{
+    width: 100%;
+    height: 100%;
+    padding-top: 5vh;
+}
+
+.educational-background .certificates{
+    border-left: 1px solid white;
+    
+}
+
+
+.graduations h1, .certificates h1{
+    font-size: 2rem;
+    margin-bottom: 5vh;
+}
+
+.graduations h1, .certificates i{
+    margin-right: 10px;
+}
+
+
+
+
+.graduations ul, .certificates ul{
+    font-size: 1rem;
+    line-height: 2.5rem;
+    text-align: center;
+    list-style: none;
+}
+
+/* END OF EDUCATION SECTION ---------------------------------------------------------------*/
+
+
+
+/* CONTACT SECTION ---------------------------------------------------------------*/
+
+.contact-section .contact{
+    width: 70vw;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact .contact-form {
+    margin-top: 1vh;
+    width: 70vw;
+    height: auto;
+    margin-bottom: 5%;
+    text-align: center;
+    letter-spacing: 1.3rem;
+}
+
+
+.contact .contact-form h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.contact .row .col-left iframe{
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+    width: 100%;
+    height: 50%;
+}
+
+.contact-section .contact .row {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 70vw;
+    height: 80%;
+    position: relative;
+}
+
+.contact-section .contact .row .col-left {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    bottom: 0;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    
+}
+
+.contact-section .contact .row .col-right {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: justify;
+    flex: 3;
+
+}
+    
+.contact-section .contact .row .col-right label{
+    font-size: 1.4rem;
+}
+
+.contact-section .contact .row .col-right input{
+    border: none;
+}
+
+.contact-section .contact .row .col-right form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+}
+
+.col-right form textarea{
+    width: 80%;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    /* border: 1px solid lightskyblue; */
+}
+
+
+input[type=text] {
+    text-align: left;
+    width: 80%;
+    padding: 1em;
+    margin-bottom: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+::placeholder{
+    color: white;
+    opacity: 0.3;
+    font-size: 1.2rem;
+}
+
+input[type=submit] {
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    background-color: rgba(135, 206, 250, 0.671);
+    color: white;
+    padding: 1rem;
+    border-radius:0.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    width: 7em;
+}
+
+input[type=submit]:hover {
+    background-color:lightskyblue;
+  }
+
+
+/* END OF CONTACT SECTION ---------------------------------------------------------------*/
+
+
+
+
+/* FOOTER SECTION ---------------------------------------------------------------*/
+
+.footer {
+    color: white;
+    background-color: transparent;
+    height: 15vh;
+    width: 70vw;
+    position: absolute;
+    bottom: 0;
+    display: flex;  
+    align-items: center;
+}
+
+.footer-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+}
+
+
+.footer-title h1{
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
+}
+
+
+.footer-title h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.footer-title p{
+    font-size: 0.7rem;
+}
+
+.social-media {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+
+.social-media .media-text h2 {    
+    font-size: 1rem;   
+}
+
+.media-icons i{
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px; 
+}
+
+.media-icons .fa-facebook:hover {
+    color: #3b5998;
+}
+
+.media-icons .fa-twitter:hover {
+    color: #00acee;
+}
+
+.media-icons .fa-instagram:hover {
+    color: #fb3958;
+}
+
+.media-icons .fa-linkedin:hover {
+    color: #0e76a8;
+}
+
+/* END OF FOOTER SECTION ---------------------------------------------------------------*/
+
+
+/*  KEYFRAMES */
+
+
+@keyframes overlay{
+    0%{
+        width: 0;
+        left: 10%;
+    }
+    50%{
+        width: 80%;
+        left: 10%;
+    }
+    100%{
+        width: 0%;
+        left: 90%;
+    }
+}
+
+
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+
+@keyframes text_reveal_span{
+    100%{
+        color: lightskyblue;
+    }
+}
+
+@keyframes animate{
+    0%, 100%{
+        background-image: url(../imgs/bg-1.jpg);
+    }
+    25%{
+        background-image: url(../imgs/bg-2.jpg);
+    }
+    50%{
+        background-image: url(../imgs/bg-3.jpg);
+    }
+    75%{
+        background-image: url(../imgs/bg-4.jpg);
+    }
+}
+
+/*  END OF KEYFRAMES */
+
+
+/* RESPONSIVENESS CODE  */
+
+@media only screen and (max-width: 768px){
+    body{
+        background-position: center center;
+    }
+    .call-text {
+        font-size: 1.4rem;
+        transition: 0.5s ease;
+        top: 50%;
+    }
+
+    .contact .row .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+}  
+
+/* END OF RESPONSIVENESS CODE  */
+
+
+
+
+
+
+
+
+
+
+
+

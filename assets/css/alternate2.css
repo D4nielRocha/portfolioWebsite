@@ -1,0 +1,877 @@
+
+@font-face{
+    font-family: Roboto;
+    src: url(/assets/fonts/Roboto-Light.ttf);
+}
+
+
+
+/* GLOBAL STYLES */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+span {
+    color: #2d1c60;
+}
+
+/* END OF GLOBAL STYLES */ 
+
+/* INDEX SECTION ---------------------------------------------------------------*/
+
+
+/* LANDING PAGE  BACKGROUND */ 
+
+#index {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    text-align: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: url(../imgs/bg-alt2.jpg);    
+}
+/* END OF LANDING PAGE BACKGROUND */ 
+
+/* NAVBAR SECTION  */
+
+.navbar {
+    width: 30vw;
+    position: relative;
+    z-index: 1;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    width: 100vw;
+}
+
+.navbar .col-left {
+    height: 15vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar .col-left .brand {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
+.navbar .brand a, i{
+    color: #2d1c60;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+}
+
+.navbar .brand i{
+    color: #2d1c60;
+}
+
+.navbar .brand span {
+    margin-left: 0.8rem;
+    font-weight: 300;
+}
+
+.navbar .col-right{
+    flex: 3;
+}
+
+.navbar .col-right a{
+    text-decoration: none;
+}
+
+.navbar .menu{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar .menu a{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+.navbar .menu a:hover {
+    color: #24c5ff;
+    transition: .3s ease;
+}
+
+/* END OF NAVBAR SECTION*/
+
+
+/* CALL TEXT SECTION*/
+
+.call-text {
+    width: 20vw;
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 1.5rem;
+    line-height: 4rem;
+}
+
+.call-text h1 {
+    color: transparent;
+    position: relative;
+    animation: text_reveal ease forwards;
+    letter-spacing: 1rem;
+}
+
+
+.call-text h1:nth-child(1){
+    animation-delay: 1s;
+}
+.call-text h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+.call-text h1 span{
+    color: transparent;
+    animation: text_reveal_span ease forwards;  
+}
+
+.call-text h1:nth-child(1) span{
+    animation-delay: 1s;
+}
+
+.call-text h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+
+
+.call-text h1 .text_reveal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #2d1c60;
+    animation: overlay 1s ease forwards;
+    
+}
+
+.call-text h1:nth-child(1) .text_reveal {
+    animation-delay: 0.5s;
+}
+.call-text h1:nth-child(2) .text_reveal {
+    animation-delay: 1.5s;
+}
+
+
+
+.call-text .button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.call-text .button a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.call-text .button:hover {
+    background-color: #2d1c60;
+    color: black;
+}
+
+/* END OF CALL TEXT SECTION*/
+
+/* END OF INDEX SECTION ---------------------------------------------------------------*/
+
+
+
+/* PROFILE SECTION ---------------------------------------------------------------*/
+
+/* SECONDARY PAGES BACKGROUND */ 
+
+#profile {
+    /* background-color: #5b58dd; */
+    background-color: #016f9e;
+    /* background: linear-gradient(90deg, #fe88d6 0%, #0044c3 60%); */
+    /* background: linear-gradient(180deg, #fe88d6 0%, #0044c3 15%,  #0044c3 85%,  #fe88d6 100%); */
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    position: relative;   
+}
+
+#profile span{
+    color: #fea3e0;
+}
+
+/* END OF SECONDARY PAGES BACKGROUND SECTION */
+
+/* SECONDARY NAVBAR SECTION */ 
+
+
+#profile .navbar .row {
+    width: 100vw;
+    height: 20vh;
+}
+
+#profile .navbar .row .col-left a{
+    font-weight: 400;
+}
+
+#profile .navbar .row .brand i{
+    color: #fea3e0;
+}
+
+
+#profile .navbar .row a{
+    color: #fea3e0;
+    transition: 0.3s ease;
+}
+
+
+#profile .col-right .menu a:hover{
+    border-radius: 5px;
+    color: #24c5ff;
+    font-size: 1.7rem;
+    transition: 0.3s ease;
+}
+
+#profile .col-right .menu a:visited{
+    color: #f11caa;
+}
+
+/* END OF SECONDARY NAVBAR SECTION */ 
+
+/*  CONTENT SECTION*/
+
+.container{
+    height: 65vh;
+    position: absolute;
+    left: 0;
+    top: 25;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.content-img{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 80%;
+}
+
+.content-img img {
+    object-fit: none;
+    object-position: bottom;
+    width: 40vw;
+    height: 45vh;
+    opacity: 0.9;
+    filter: drop-shadow(15px 15px 10px black);
+    border-radius: 15px;
+}
+
+.content-text{
+    height: 75vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-text .title{
+    font-size: 2em;
+    margin: 4rem 0;
+    letter-spacing: 1rem;
+}
+
+.content-text .text {
+    margin: 0em 3em;
+    padding: 2em;
+    line-height: 2em;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;  
+    text-align: justify; 
+}
+
+/*  END OF CONTENT SECTION*/
+
+
+/* END OF PROFILE SECTION ---------------------------------------------------------------*/
+
+/* EXPERIENCE SECTION ---------------------------------------------------------------*/
+
+
+.experience{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7.5vh;
+    width: 100vw;
+}
+
+.experience-title{
+    /* width: 50%; */
+    flex: 1;
+}
+
+.experience-title h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.5em;
+    letter-spacing: 0.5rem;
+}
+
+.experience-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    text-align: left;
+    line-height: 2.5rem;
+    flex: 3;
+}
+
+.experience-content .experience-item{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%;
+    height: 70%;
+    position: relative;
+
+}
+
+.experience-content .experience-item:hover{
+    box-shadow: 0px 0px 15px #24c5ff;;
+}
+
+
+.experience-content .experience-item h2{
+    color: #fea3e0;
+    font-size: 1.5rem;
+    margin-top: 5%;
+    font-weight: 700;
+}
+
+.experience-content .experience-item i {
+    font-size: 1.1rem;
+    text-decoration: underline;
+    margin-bottom: 5%;
+    color: white;
+    letter-spacing: 0.3rem;
+}
+
+.experience-content .experience-item p {
+    font-size: 1rem;
+    margin-top: 5%;
+}
+
+.experience-content .experience-item ul {
+    margin-top: 5%;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+
+/* END OF EXPERIENCE SECTION ---------------------------------------------------------------*/
+
+/* CREATIONS SECTION ---------------------------------------------------------------*/
+
+.creations{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.creations .creations-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 30vh;
+}
+
+.creations .creations-text h1{
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1.5em;
+}
+
+
+.creations .creations-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    height: 65%;
+    width: 50%;
+}
+
+.creations .creations-cards .creation-card{
+    background-color: transparent;
+    perspective: 1000px;
+    align-items: center;
+    width: 100%;
+}
+.creations .creations-cards .creation-card .card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.creations .creations-cards .creation-card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+.creations .creations-cards .creation-card .card-inner .card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #bbb;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.creations .creations-cards .creation-card .card-inner .card-front img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.creations .creations-cards .creation-card .card-inner .card-back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.creations .creations-cards .creation-card h1{
+    font-weight: 500;
+    margin: 1em;
+}
+
+.creations .creations-cards .creation-card ul{
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+
+
+/* ENd OF CREATIONS SECTION ---------------------------------------------------------------*/
+
+
+/* EDUCATION SECTION ---------------------------------------------------------------*/
+
+.education {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.education .education-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 40%;
+    flex: 1;
+}
+
+.education .education-title h1{
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1.5em;
+}
+
+.education .educational-background{
+    display: flex;
+    width: 100%;
+    height: 65vh;
+    flex: 3;
+}
+
+.educational-background .graduations, .certificates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 75%;
+    padding-top: 5vh;
+}
+
+.educational-background .certificates{
+    border-left: 1px solid white;  
+}
+
+.educational-background i{
+    color: #fea3e0;
+}
+
+
+.graduations h1, .certificates h1{
+    font-size: 1.8rem;
+    margin-bottom: 5vh;
+}
+
+.graduations h1, .certificates i{
+    margin-right: 10px;
+}
+
+.graduations ul, .certificates ul{
+    font-size: 1.2rem;
+    line-height: 4rem;
+    text-align: center;
+    list-style: none;
+}
+
+/* END OF EDUCATION SECTION ---------------------------------------------------------------*/
+
+
+
+/* CONTACT SECTION ---------------------------------------------------------------*/
+
+.contact-section .contact{
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact .contact-form {
+    height: 100%;
+    /* width: 20%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.contact .contact-form h2{
+    width: 75%;
+    height: 50%;
+    font-weight: 100;
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    letter-spacing: 1rem;
+}
+
+
+.contact .contact-form h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.contact .row .col-left iframe{
+    box-shadow: 0 0 10px black;
+    width: 20em;
+    height: 25em;
+    margin-left: 0.5em;
+}
+
+.contact-section .contact .row {
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: center;
+    width: 70vw;
+    height: 65vh;
+    flex: 3;
+}
+
+.contact-section .contact .row .col-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+    
+}
+
+.contact-section .contact .row .col-right {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    flex: 3;
+    height: 100%;
+}
+    
+.contact-section .contact .row .col-right label{
+    font-size: 1.2rem;
+}
+
+.contact-section .contact .row .col-right input{
+    border: none;
+}
+
+.contact-section .contact .row .col-right form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+}
+
+.col-right form textarea{
+    width: 80%;
+    margin-top: 2em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+}
+
+
+input[type=text] {
+    text-align: left;
+    width: 80%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.349);
+    opacity: 1;
+}
+
+input[type=submit] {
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    background-color:#fea3e0d2;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 7em;
+    margin-bottom: 20px;
+}
+
+input[type=submit]:hover {
+    background-color: #fea3e0;
+  }
+
+
+/* END OF CONTACT SECTION ---------------------------------------------------------------*/
+
+
+
+
+/* FOOTER SECTION ---------------------------------------------------------------*/
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.295);
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    color: #fea3e0;    
+}
+
+
+.footer-title{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+
+.footer-title h1{
+    font-size: 1.4rem;
+    letter-spacing: 1rem;
+}
+
+
+.footer-title h2 {
+    text-transform: uppercase;
+    font-size: 1.0rem;
+    letter-spacing: 0.2rem;
+}
+
+.footer-title p{
+    font-size: 0.6rem;
+    letter-spacing: 0.2rem;
+}
+
+.social-media {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+.social-media .media-text h2 {    
+    font-size: 0.8rem; 
+    letter-spacing: 0.8rem;  
+}
+
+.media-icons {
+    width: 40%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.media-icons i{
+    color: #fea3e0;
+    font-size: 1.6rem;
+    margin: 0 10px; 
+}
+
+.media-icons .fa-facebook:hover {
+    color: #3b5998;
+}
+
+.media-icons .fa-twitter:hover {
+    color: #00acee;
+}
+
+.media-icons .fa-instagram:hover {
+    color: #fb3958;
+}
+
+.media-icons .fa-linkedin:hover {
+    color: #0e76a8;
+}
+
+/* END OF FOOTER SECTION ---------------------------------------------------------------*/
+
+/* footer sizing js code*/
+
+.footerLarge{
+    width: 100vw;
+}
+
+/* end of footer sizing js code*/
+
+
+/*  KEYFRAMES */
+
+
+@keyframes overlay{
+    50%{
+        width: 100%;
+        left: 0%;
+    }
+    100%{
+        width: 0%;
+        left: 100%;
+    }
+}
+
+
+@keyframes text_reveal{
+    100%{
+        color: #2d1c60;
+    }
+}
+
+@keyframes text_reveal_span{
+    100%{
+        color: #2d1c60;
+    }
+}
+
+/*  END OF KEYFRAMES */
+
+
+/* RESPONSIVENESS CODE  */
+
+@media only screen and (max-width: 768px){
+    body{
+        background-position: center center;
+    }
+    .call-text {
+        font-size: 1.4rem;
+        transition: 0.5s ease;
+        top: 50%;
+    }
+
+    .contact .row .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+}  
+
+/* END OF RESPONSIVENESS CODE  */
+
+
+
+
+
+
+
+
+
+
+
+
